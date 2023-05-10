@@ -2,6 +2,7 @@ package com.nitc.projectsgc.mentors.adapters
 
 import android.app.AlertDialog
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -176,6 +177,7 @@ class MentorAppointmentsAdapter(
                                                         )
                                                         .build()
                                                 FirebaseMessaging.getInstance().send(message)
+                                                Log.d("messagePush","worked")
                                             }
                                             studentCoroutineScope.cancel()
                                         }
